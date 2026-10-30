@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --yellow: #F4D04E;
+      --gray-950: #111111;
+      --gray-500: #6B6B6B;
+      --white: #FFFFFF;
+
+      --text-1: 800 1.5rem/1.5 "Figtree", sans-serif;
+      --text-2: 500 1rem/1.5 "Figtree", sans-serif;
+      --text-3: 500 0.875rem/1.5 "Figtree", sans-serif;
+      --text-3-bold: 800 0.875rem/1.5 "Figtree", sans-serif;
+
+      --spacing-50: 0.25rem;  
+      --spacing-100: 0.5rem;  
+      --spacing-150: 0.75rem; 
+      --spacing-300: 1.5rem; 
+    }
+
+    h1,
+    p,
+    span {
+      margin: 0;
+    }
+
+    body {
+      margin: 0px;
+      background-color: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100dvh;
+      width: 100%;
+    }
+
+    .card {
+      background-color: var(--white);
+      padding: var(--spacing-300);
+      border-radius: 10px;
+      border: 1px solid var(--gray-950);
+      max-width: min-content;
+    }
+
+    .img {
+      display: block;
+      height: auto;
+      width: 100%;
+      margin-bottom: var(--spacing-300);
+    }
+
+    .img > img {
+      border-radius: 10px;
+    }
+
+    .card-data {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-150);
+      align-items: start;
+    }
+
+    .badge {
+      padding: var(--spacing-50) var(--spacing-150);
+      border-radius: 4px;
+      background-color: var(--yellow);
+      font: var(--text-3-bold);
+      color: var(--gray-950);
+    }
+
+    .date {
+      color: var(--gray-950);
+      font: var(--text-3);
+    }
+
+    .card-title {
+      font: var(--text-1);
+      color: var(--gray-950);
+    }
+
+    .card-description {
+      font: var(--text-2);
+      color: var(--gray-500);
+    }
+
+    .card-user {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-150);
+      font: var(--text-3-bold);
+      color: var(--gray-950);
+    }
+
+    .card-user > img {
+      max-width: 32px;
+      aspect-ratio: 1/1;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <div class="img">
+        <img src="./assets/images/illustration-article.svg" alt="ilustração do artigo">
+      </div>
+      <div class="card-data">
+        <span class="badge">Learning</span>
+
+        <p class="date">Published 21 Dec 2023</p>
+
+        <h1 class="card-title">HTML & CSS foundations</h1>
+
+        <p class="card-description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+
+        <div class="card-user">
+          <img src="/assets/images/image-avatar.webp" alt="Foto de perfil do usuário.">
+          <span>
+            Greg Hooper
+          </span>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
