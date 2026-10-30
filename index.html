@@ -30,6 +30,10 @@
       --spacing-300: 1.5rem; 
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     h1,
     p,
     span {
@@ -43,15 +47,16 @@
       align-items: center;
       justify-content: center;
       height: 100dvh;
-      width: 100%;
+      width: min(calc(100% - 2rem), 327px);
     }
 
     .card {
       background-color: var(--white);
       padding: var(--spacing-300);
-      border-radius: 10px;
+      border-radius: 20px;
       border: 1px solid var(--gray-950);
       max-width: min-content;
+      box-shadow: 8px 8px 0 0 #000 ;
     }
 
     .img {
@@ -85,9 +90,17 @@
       font: var(--text-3);
     }
 
-    .card-title {
+    .card-link {
       font: var(--text-1);
       color: var(--gray-950);
+      transition-duration: 300ms;
+    }
+
+    .card-link:hover {
+      transition: all;
+      color: var(--yellow);
+      cursor: pointer;
+      transition-duration: 300ms;
     }
 
     .card-description {
@@ -113,19 +126,19 @@
   <main>
     <div class="card">
       <div class="img">
-        <img src="./assets/images/illustration-article.svg" alt="ilustração do artigo">
+        <img src="./assets/images/illustration-article.svg" alt="Article Illustration">
       </div>
       <div class="card-data">
         <span class="badge">Learning</span>
 
         <p class="date">Published 21 Dec 2023</p>
 
-        <h1 class="card-title">HTML & CSS foundations</h1>
+        <a class="card-link">HTML & CSS foundations</a>
 
         <p class="card-description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
 
         <div class="card-user">
-          <img src="./assets/images/image-avatar.webp" alt="Foto de perfil do usuário.">
+          <img src="./assets/images/image-avatar.webp" alt="Greg Hooper">
           <span>
             Greg Hooper
           </span>
